@@ -119,9 +119,4 @@ SoQ
    12  sudo systemctl status sonarqube
    13  history
 
-https://github.com/devopshydclub/vprofile-project.git
-https://aakprojectsla-m7v5998
-mbandiaak@gmail.com
-Password:   GBHs20000
-https://api.slack.com
 
