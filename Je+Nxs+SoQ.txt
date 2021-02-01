@@ -1,0 +1,88 @@
+Je
+++++++++++++++++++
+ 1  sudo apt-get update -y
+    2  sudo apt-get upgrade -y
+    3  sudo apt install awscli -y
+    4  aws --version
+    5  cd /var/lib/jenkins
+    6  ll
+    7  cd ..
+    8  sudo systemctl status jenkins
+    9  sudo systemctl stop jenkins
+   10  sudo apt install wget
+   11  sudo wget https://cicd-stack-data-backup.s3.amazonaws.com/jenkins_ci_pipeline_jobs.tar.gz
+   12  sudo tar -xzvf jenkins_ci_pipeline_jobs.tar.gz
+   13  sudo systemctl start jenkins
+   14  sudo systemctl enable jenkins
+   15  sudo systemctl status jenkins
+   16  cd jenkins/
+   17  ll
+   18  cd jobs/
+   19  ll
+   20  cd ../../
+   21  history
+
+Nxs
+++++++++++++++++
+ 1  sudo yum update -y
+    2  sudo yum upgrade -y
+    3  sudo yum install epel-release
+    4  sudo yum install python-pip -y
+    5  sudo yum install python34-pip -y
+    6  sudo pip install --upgrade pip -y
+    7  sudo pip install --upgrade pip
+    8  curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+    9  sudo yum install unzip -y
+   10  unzip awscli-bundle.zip
+   11  ./awscli-bundle/install -b ~/bin/aws
+   12  echo $PATH | grep ~/bin
+   13  export PATH=~/bin:$PATH
+   14  cd /opt
+   15  ll
+   16  sudo yum install wget
+   17  sudo wget https://cicd-stack-data-backup.s3.amazonaws.com/nexus-cicd-artifactory.tgz
+   18  sudo systemctl stop nexus
+   19  ll
+   20  sudo tar -xzvf nexus-cicd-artifactory.tgz
+   21  sudo systemctl start nexus
+   22  sudo systemctl enable nexus
+   23  sudo systemctl status nexus
+   24  history
+
+SoQ
++++++++++++++++
+ 1  sudo apt-get update -y
+    2  sudo apt-get upgrade -y
+    3  sudo apt install awscli -y
+    4  cd /opt
+    5  ll
+    6  sudo systemctl stop sonarqube
+    7  sudo apt install wget
+    8  sudo wget https://cicd-stack-data-backup.s3.amazonaws.com/sonarqube-jjtech-codeanalysis.tgz
+    9  sudo tar -xzvf sonarqube-jjtech-codeanalysis.tgz
+   10  sudo systemctl start sonarqube
+   11  sudo systemctl enable sonarqube
+   12  sudo systemctl status sonarqube
+   13  sudo apt install awscli -y
+   14  history
+----------------------------------------------------------------------------------------------------------
+
+
+-install maven invoker plugin
+-install maven Maven Dependency Update Trigger plugin
++
+Preparation	
+Checking internet connectivity
+Checking update center connectivity
+Success
+Maven Dependency Update Trigger	 Success
+Maven Invoker	 Success
+Loading plugin extensions	 Success
+Maven Info	 Success
+H2 API	 Success
+Config File Provider	 Success
+Pipeline Maven Integration	 Success
+Ivy	 Success
+Artifactory	 Success
+Repository Connector	 Success
+Loading plugin extensions
