@@ -113,7 +113,12 @@ pipeline {
                 }
             }
         }
-
+        post {
+            always {
+                cleanWs()
+                slackNotifier(currentBuild.currentResult)
+            }
+        }
 
     }
 
